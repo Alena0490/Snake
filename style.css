@@ -1,0 +1,82 @@
+:root {
+    --snake-color: #05DBF2;              /* tělo hada */
+    --snake-tail-color: #039EB0;         /* hlava hada (mírně tmavší) */
+    --snake-border-color: #023E44; 
+    --secondary-color-light: #618C42;
+    --secondary-color-dark: #3A592C;
+    --food-color: #F26B05;               /* základní jídlo */
+    --food-color-bonus: #FF934D;
+    --obstacle-color: #3A592C;           /* základní překážka */
+    --obstacle-border: #2A4021;
+    --score-color: #f5f5f5;              /* text skóre */
+    --score-background: rgba(0, 0, 0, 0.5);
+    --background-color-light: #A69185;
+    --background-color-dark: #40322B;
+    --flash-color: #FFEB3B;              /* záblesk při získání bodu */
+    --game-over-color: #E63946;          
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family:  'Digital', sans-serif;
+    background-color: var(--obstacle-border);
+}
+
+
+
+canvas {
+    width: 50vh;
+    height: 50vh;
+    border: 5px solid var(--secondary-color-light);
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px var(--background-color-dark);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    background: var(--obstacle-border);
+    border: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.score {
+    width: fit-content;
+    padding: .2rem 2rem .7rem;
+    display: flex;
+    line-height: 1;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 4rem);
+    background: var(--score-background);
+    border-radius: 10px;
+    color: var(--score-color);
+    border: 3px solid var(--secondary-color-light);
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px var(--background-color-dark);
+}
+
+snakeSize {
+    border: 2px solid var(--snake-border-color)
+}
+
+
+@font-face {
+  font-family: 'Digital';
+  src: url('digital.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
